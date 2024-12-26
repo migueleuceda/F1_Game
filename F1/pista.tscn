@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Escenas/pistaCarrera.tscn" type="PackedScene" id=1]
+[ext_resource path="res://racecars2d/Fondo-gris-transparente-2.png" type="Texture" id=2]
+[ext_resource path="res://Race-Track-Tile-Set-PNG/ARCO for OSX.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Race-Track-Tile-Set-PNG/PNG/Button/Normal/Button Normal-01.png" type="Texture" id=4]
+[ext_resource path="res://Race-Track-Tile-Set-PNG/PNG/Button/Normal/Button Normal-36.png" type="Texture" id=5]
+[ext_resource path="res://Race-Track-Tile-Set-PNG/PNG/Button/Disable/Button Disable-01.png" type="Texture" id=6]
+[ext_resource path="res://scripts/pista.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 85, 85 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[node name="pista" type="Node2D"]
+position = Vector2( 640, 358 )
+script = ExtResource( 9 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = -637.0
+margin_top = -357.0
+margin_right = 639.0
+margin_bottom = 362.0
+
+[node name="ViewportContainer1" type="ViewportContainer" parent="HBoxContainer"]
+margin_right = 636.0
+margin_bottom = 719.0
+size_flags_horizontal = 3
+stretch = true
+
+[node name="Viewport1" type="Viewport" parent="HBoxContainer/ViewportContainer1"]
+size = Vector2( 636, 719 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/ViewportContainer1/Viewport1"]
+visible = false
+position = Vector2( 566, 428 )
+rotation = 3.13128
+scale = Vector2( 0.75, 0.75 )
+current = true
+
+[node name="pistaCarrera" parent="HBoxContainer/ViewportContainer1/Viewport1" instance=ExtResource( 1 )]
+position = Vector2( 4, -1 )
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="HBoxContainer"]
+margin_left = 640.0
+margin_right = 1276.0
+margin_bottom = 719.0
+size_flags_horizontal = 3
+stretch = true
+
+[node name="Viewport2" type="Viewport" parent="HBoxContainer/ViewportContainer2"]
+size = Vector2( 636, 719 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Camera2D2" type="Camera2D" parent="HBoxContainer/ViewportContainer2/Viewport2"]
+visible = false
+position = Vector2( 680.905, 425.333 )
+rotation = -0.0207854
+scale = Vector2( 4.26136, 4.26136 )
+current = true
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -2.0
+margin_top = -361.0
+margin_right = 15.0
+margin_bottom = 364.0
+
+[node name="MenuPausa" type="Control" parent="."]
+visible = false
+margin_left = -641.0
+margin_top = -356.0
+margin_right = 642.0
+margin_bottom = 361.0
+
+[node name="Sprite" type="Sprite" parent="MenuPausa"]
+position = Vector2( 655, 350 )
+scale = Vector2( 1.02833, 0.642 )
+texture = ExtResource( 2 )
+
+[node name="BotonContinuar" type="Button" parent="MenuPausa"]
+pause_mode = 2
+anchor_left = 0.365
+anchor_top = 0.497
+anchor_right = 0.365
+anchor_bottom = 0.497
+margin_left = 27.705
+margin_top = -47.349
+margin_right = 124.705
+margin_bottom = 44.651
+custom_styles/disabled = SubResource( 2 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Button3" type="Button" parent="MenuPausa"]
+pause_mode = 2
+anchor_left = 0.387
+anchor_top = 0.497
+anchor_right = 0.387
+anchor_bottom = 0.497
+margin_left = 215.479
+margin_top = -46.349
+margin_right = 312.479
+margin_bottom = 45.651
+icon = ExtResource( 5 )
+flat = true
+
+[node name="Resultado" type="Label" parent="."]
+visible = false
+margin_left = -269.0
+margin_top = -163.0
+margin_right = 289.0
+margin_bottom = -98.0
+custom_fonts/font = SubResource( 1 )
+text = "JUGADOR 1 GANA"
+
+[connection signal="pressed" from="MenuPausa/BotonContinuar" to="." method="_on_BotonContinuar_pressed"]
