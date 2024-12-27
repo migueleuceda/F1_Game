@@ -1,9 +1,9 @@
-🏎️ README - Homenatge a [Nom del Joc de F1]
+🏎️ README - Homenatge a F1
 Autors
 Dani Rueda
 Miguel Euceda
 🎮 Joc a homenatjar
-El projecte és un homenatge al joc clàssic de Fórmula 1, [Nom del Joc de F1], conegut per la seva emocionant simulació de carreres i per la manera com va introduir els jugadors a l'experiència de la Fórmula 1. Aquest joc va captivar els fans de l'automobilisme amb la seva jugabilitat immersiva i les seves recreacions de circuits icònics. La nostra intenció és mantenir l’essència del joc original, però afegint millores modernes i algunes característiques noves.
+El projecte és un homenatge al joc clàssic de Fórmula 1, conegut per la seva emocionant simulació de carreres i per la manera com va introduir els jugadors a l'experiència de la Fórmula 1. Aquest joc va captivar els fans de l'automobilisme amb la seva jugabilitat immersiva i les seves recreacions de circuits icònics. La nostra intenció és mantenir l’essència del joc original, però afegint millores modernes i algunes característiques noves.
 
 🔄 Millores i canvis planificats
 A més de recrear el joc original, introduirem canvis i millores per oferir una experiència de joc actualitzada i més rica:
@@ -28,4 +28,4 @@ Implementació de la física de conducció i IA - setmana 5-6
 Desenvolupament de la interfície d'usuari i mode multijugador - setmana 7-8
 Test de jugabilitat i ajustos finals - setmana 9-10
 🎯 Objectiu final
-El nostre objectiu és crear un joc d’homenatge a [Nom del Joc de F1] que actualitzi la seva experiència de joc per a un públic modern, oferint tant l’emoció de les carreres de F1 com les característiques clàssiques que van fer d'aquest títol un clàssic.
+El nostre objectiu és crear un joc d’homenatge a F1 que actualitzi la seva experiència de joc per a un públic modern, oferint tant l’emoció de les carreres de F1 com les característiques clàssiques que van fer d'aquest títol un clàssic.
