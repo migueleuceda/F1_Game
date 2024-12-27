@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://racecars2d/cars/pitstop_car_2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/car2.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 29.4671, 65.1289 )
+
+[node name="car2" type="KinematicBody2D"]
+position = Vector2( 791, 414 )
+rotation = 3.13112
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 42.467, 71.8711 )
+shape = SubResource( 1 )
+one_way_collision = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 42, 71 )
+rotation = 3.14892
+scale = Vector2( 0.142, 0.132 )
+texture = ExtResource( 1 )
